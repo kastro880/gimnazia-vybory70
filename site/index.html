@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Выборы Президента гимназии</title>
+  <meta name="description" content="Официальный сайт выборов Президента гимназии. Кандидаты, программы, голосование." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">
+        <span class="logo__mark">✓</span>
+        ГБОУ Гимназия № 70 16.11.2026
+        <span class="logo__text">Выборы&nbsp;Президента</span>
+      </a>
+      <nav class="nav">
+        <a href="#candidates">Кандидаты</a>
+        <a href="#vote">Голосование</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero__inner">
+      <span class="hero__eyebrow">Гимназия № 70 · 2026</span>
+      <h1 class="hero__title">Выбери своё будущее</h1>
+      <p class="hero__subtitle">
+        Познакомься с кандидатами на пост Президента гимназии,
+        изучи их программы — и сделай осознанный выбор.
+      </p>
+      <a href="#candidates" class="btn btn--primary">Смотреть кандидатов</a>
+    </div>
+    <div class="hero__decor" aria-hidden="true"></div>
+  </section>
+
+  <section class="section" id="candidates">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title">Кандидаты</h2>
+        <p class="section__subtitle">
+          Листайте стрелками или свайпом. Нажмите на карточку, чтобы открыть программу.
+        </p>
+      </div>
+
+      <div class="carousel">
+        <button class="carousel__arrow carousel__arrow--prev" id="prevBtn" aria-label="Предыдущий">‹</button>
+
+        <div class="carousel__track" id="candidatesGrid"></div>
+
+        <button class="carousel__arrow carousel__arrow--next" id="nextBtn" aria-label="Следующий">›</button>
+      </div>
+
+      <div class="carousel__dots" id="carouselDots" role="tablist" aria-label="Навигация по кандидатам"></div>
+    </div>
+  </section>
+
+  <section class="vote" id="vote">
+    <div class="container vote__inner">
+      <h2 class="vote__title">Готовы сделать выбор?</h2>
+      <p class="vote__text">
+        Голосование проходит с <strong>13.11.2026</strong> по <strong>16.11.2026</strong>.
+        Один ученик — один голос.
+      </p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSc0Es-ipqRqBNbICRGJ-THb6WR8I0nhLBlDEcJH1MhCUhGZvw/viewform?usp=publish-editor" target="_blank" rel="noopener" class="btn btn--accent">
+        Перейти к голосованию →
+      </a>
+      <p class="vote__note">Сайт создан Системным Администратором гимназии</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© 2026 Гимназия № 70 · Выборы Президента</span>
+      <span>Вопросы: <a href="mailto:nik.kostromin.2002@mail.ru">info@example</a></span>
+    </div>
+  </footer>
+
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__content" role="document">
+      <button class="modal__close" data-close aria-label="Закрыть">×</button>
+      <div class="modal__grid" id="modalGrid"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
